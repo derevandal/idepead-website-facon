@@ -65,67 +65,67 @@ section.hero.is-facon.is-bold.is-fullheight
                     | Por favor, selecione algum curso disponível.
               .control
                 .pretty.p-default.p-fill.p-icon
-                  input#arte-educacao-terapia(checked='', type='checkbox', value="arte-educacao-terapia", v-model="form.courses")
+                  input#arte-educacao-terapia(type='checkbox', value="arte-educacao-terapia", v-model="form.courses")
                   .state.p-warning
                     i.fa.fa-check.icon
                     label(for='arte-educacao-terapia')
                       | Educação - Arte, Educação e Terapia
                 .pretty.p-default.p-fill.p-icon
-                  input#docencia(checked='', type='checkbox', value="docencia", v-model="form.courses")
+                  input#docencia(type='checkbox', value="docencia", v-model="form.courses")
                   .state.p-warning
                     i.fa.fa-check.icon
                     label(for='docencia')
                       | Educação - Docência no Ensino Superior
                 .pretty.p-default.p-fill.p-icon
-                  input#educacao-ambiental(checked='', type='checkbox', value="educacao-ambiental", v-model="form.courses")
+                  input#educacao-ambiental(type='checkbox', value="educacao-ambiental", v-model="form.courses")
                   .state.p-warning
                     i.fa.fa-check.icon
                     label(for='educacao-ambiental')
                       | Educação - Educação Ambiental
                 .pretty.p-default.p-fill.p-icon
-                  input#educacao-especial(checked='', type='checkbox', value="educacao-especial", v-model="form.courses")
+                  input#educacao-especial(type='checkbox', value="educacao-especial", v-model="form.courses")
                   .state.p-warning
                     i.fa.fa-check.icon
                     label(for='educacao-especial')
                       | Educação - Educação Especial
                 .pretty.p-default.p-fill.p-icon
-                  input#eja(checked='', type='checkbox', value="eja", v-model="form.courses")
+                  input#eja(type='checkbox', value="eja", v-model="form.courses")
                   .state.p-warning
                     i.fa.fa-check.icon
                     label(for='eja')
                       | Educação - Educação de Jovens e Adultos
                 .pretty.p-default.p-fill.p-icon
-                  input#gestao-escolar(checked='', type='checkbox', value="gestao-escolar", v-model="form.courses")
+                  input#gestao-escolar(type='checkbox', value="gestao-escolar", v-model="form.courses")
                   .state.p-warning
                     i.fa.fa-check.icon
                     label(for='gestao-escolar')
                       | Educação - Gestão Escolar
                 .pretty.p-default.p-fill.p-icon
-                  input#psicomotricidade(checked='', type='checkbox', value="psicomotricidade", v-model="form.courses")
+                  input#psicomotricidade(type='checkbox', value="psicomotricidade", v-model="form.courses")
                   .state.p-warning
                     i.fa.fa-check.icon
                     label(for='psicomotricidade')
                       | Educação - Psicomotricidade
                 .pretty.p-default.p-fill.p-icon
-                  input#psicopedagogia-clinica(checked='', type='checkbox', value="psicopedagogia-clinica", v-model="form.courses")
+                  input#psicopedagogia-clinica(type='checkbox', value="psicopedagogia-clinica", v-model="form.courses")
                   .state.p-warning
                     i.fa.fa-check.icon
                     label(for='psicopedagogia-clinica')
                       | Educação - Psicopedagogia Clínica
                 .pretty.p-default.p-fill.p-icon
-                  input#psicopedagogia-institucional(checked='', type='checkbox', value="psicopedagogia-institucional", v-model="form.courses")
+                  input#psicopedagogia-institucional(type='checkbox', value="psicopedagogia-institucional", v-model="form.courses")
                   .state.p-warning
                     i.fa.fa-check.icon
                     label(for='psicopedagogia-institucional')
                       | Educação - Psicopedagogia Institucional
                 .pretty.p-default.p-fill.p-icon
-                  input#tgd(checked='', type='checkbox', value="tgd", v-model="form.courses")
+                  input#tgd(type='checkbox', value="tgd", v-model="form.courses")
                   .state.p-warning
                     i.fa.fa-check.icon
                     label(for='tgd')
                       | Educação - Transtorno Global de Desenvolvimento
                 .pretty.p-default.p-fill.p-icon
-                  input#gestao-publica(checked='', type='checkbox', value="gestao-publica", v-model="form.courses")
+                  input#gestao-publica(type='checkbox', value="gestao-publica", v-model="form.courses")
                   .state.p-warning
                     i.fa.fa-check.icon
                     label(for='gestao-publica')
