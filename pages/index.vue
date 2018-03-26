@@ -3,7 +3,7 @@ section.hero.is-facon.is-bold.is-fullheight
   .hero-body
     .container
       .column.is-6.is-offset-3
-        h1.title
+        h1.title.has-text-centered
           img(src="/facon-long-white.svg" width="600" alt="FACON - Faculdade de Conchas")
         .box
           .title.has-text-black.has-text-centered
@@ -56,88 +56,64 @@ section.hero.is-facon.is-bold.is-fullheight
                 span.help.is-danger(v-if="errors.has('email')") Informe seu e-mail.
             .field
               .label Qual curso você tem interesse?
-              article.notification.is-warning(v-if="noCourseSelected && this.form.courses.length > 0")
+              article.notification.is-warning(v-if="noCourseSelected && this.form.courses.length === 0")
                 .media
                   .media-left
                     span.icon.is-large
                       i.fa.fa-exclamation-circle.fa-3x
                   .media-content
                     | Por favor, selecione algum curso disponível.
-              .control
-                .pretty.p-default.p-fill.p-icon
-                  input#arte-educacao-terapia(type='checkbox', value="arte-educacao-terapia", v-model="form.courses")
-                  .state.p-warning
-                    i.fa.fa-check.icon
-                    label(for='arte-educacao-terapia')
-                      | Educação - Arte, Educação e Terapia
-                .pretty.p-default.p-fill.p-icon
-                  input#docencia(type='checkbox', value="docencia", v-model="form.courses")
-                  .state.p-warning
-                    i.fa.fa-check.icon
-                    label(for='docencia')
-                      | Educação - Docência no Ensino Superior
-                .pretty.p-default.p-fill.p-icon
-                  input#educacao-ambiental(type='checkbox', value="educacao-ambiental", v-model="form.courses")
-                  .state.p-warning
-                    i.fa.fa-check.icon
-                    label(for='educacao-ambiental')
-                      | Educação - Educação Ambiental
-                .pretty.p-default.p-fill.p-icon
-                  input#educacao-especial(type='checkbox', value="educacao-especial", v-model="form.courses")
-                  .state.p-warning
-                    i.fa.fa-check.icon
-                    label(for='educacao-especial')
-                      | Educação - Educação Especial
-                .pretty.p-default.p-fill.p-icon
-                  input#eja(type='checkbox', value="eja", v-model="form.courses")
-                  .state.p-warning
-                    i.fa.fa-check.icon
-                    label(for='eja')
-                      | Educação - Educação de Jovens e Adultos
-                .pretty.p-default.p-fill.p-icon
-                  input#gestao-escolar(type='checkbox', value="gestao-escolar", v-model="form.courses")
-                  .state.p-warning
-                    i.fa.fa-check.icon
-                    label(for='gestao-escolar')
-                      | Educação - Gestão Escolar
-                .pretty.p-default.p-fill.p-icon
-                  input#psicomotricidade(type='checkbox', value="psicomotricidade", v-model="form.courses")
-                  .state.p-warning
-                    i.fa.fa-check.icon
-                    label(for='psicomotricidade')
-                      | Educação - Psicomotricidade
-                .pretty.p-default.p-fill.p-icon
-                  input#psicopedagogia-clinica(type='checkbox', value="psicopedagogia-clinica", v-model="form.courses")
-                  .state.p-warning
-                    i.fa.fa-check.icon
-                    label(for='psicopedagogia-clinica')
-                      | Educação - Psicopedagogia Clínica
-                .pretty.p-default.p-fill.p-icon
-                  input#psicopedagogia-institucional(type='checkbox', value="psicopedagogia-institucional", v-model="form.courses")
-                  .state.p-warning
-                    i.fa.fa-check.icon
-                    label(for='psicopedagogia-institucional')
-                      | Educação - Psicopedagogia Institucional
-                .pretty.p-default.p-fill.p-icon
-                  input#tgd(type='checkbox', value="tgd", v-model="form.courses")
-                  .state.p-warning
-                    i.fa.fa-check.icon
-                    label(for='tgd')
-                      | Educação - Transtorno Global de Desenvolvimento
-                .pretty.p-default.p-fill.p-icon
-                  input#gestao-publica(type='checkbox', value="gestao-publica", v-model="form.courses")
-                  .state.p-warning
-                    i.fa.fa-check.icon
-                    label(for='gestao-publica')
-                      | MBA - Gestão Pública
+              .control(:class="{'is-loading': loading }")
+                label.l-checkbox
+                  input(type="checkbox", value="educacao-ambiental", v-model="form.courses")
+                  i.fa.fa-check.l-warning
+                  span Educação - Educação Ambiental com ênfase em Documento Sustentável
+                label.l-checkbox
+                  input(type="checkbox", value="arte-educacao-terapia", v-model="form.courses")
+                  i.fa.fa-check.l-warning
+                  span Educação - Arte, Educação e Terapia
+                label.l-checkbox
+                  input(type="checkbox", value="docencia", v-model="form.courses")
+                  i.fa.fa-check.l-warning
+                  span Educação - Docência no Ensino Superior
+                label.l-checkbox
+                  input(type="checkbox", value="educacao-especial", v-model="form.courses")
+                  i.fa.fa-check.l-warning
+                  span Educação - Educação Especial
+                label.l-checkbox
+                  input(type="checkbox", value="eja", v-model="form.courses")
+                  i.fa.fa-check.l-warning
+                  span Educação - Educação de Jovens e Adultos
+                label.l-checkbox
+                  input(type="checkbox", value="gestao-escolar", v-model="form.courses")
+                  i.fa.fa-check.l-warning
+                  span Educação - Gestão Escolar
+                label.l-checkbox
+                  input(type="checkbox", value="psicomotricidade", v-model="form.courses")
+                  i.fa.fa-check.l-warning
+                  span Educação - Psicomotricidade
+                label.l-checkbox
+                  input(type="checkbox", value="psicopedagogia-clinica", v-model="form.courses")
+                  i.fa.fa-check.l-warning
+                  span Educação - Psicopedagogia Clínica
+                label.l-checkbox
+                  input(type="checkbox", value="psicopedagogia-institucional", v-model="form.courses")
+                  i.fa.fa-check.l-warning
+                  span Educação - Psicopedagogia Institucional
+                label.l-checkbox
+                  input(type="checkbox", value="tgd", v-model="form.courses")
+                  i.fa.fa-check.l-warning
+                  span Educação - Transtorno Global de Desenvolvimento
+                label.l-checkbox
+                  input(type="checkbox", value="gestao-publica", v-model="form.courses")
+                  i.fa.fa-check.l-warning
+                  span MBA - Gestão Pública
             .field
               .control(:class="{'is-loading': loading }")
-                .pretty.p-default.p-fill.p-icon
-                  input#accepted(checked, name="accepted" :class="{ 'is-danger': errors.has('accepted') }", type='checkbox', value="accepted", v-model="form.accepted", v-validate="'required'")
-                  .state.p-success
-                      i.fa.fa-check.icon
-                      label(for='accepted')
-                        | Aceito ser contactado(a)
+                label.l-checkbox
+                  input(checked, type="checkbox", name="accepted" :class="{ 'is-danger': errors.has('accepted') }", v-model="form.accepted", v-validate="'required'")
+                  i.fa.fa-check.l-success
+                  span Aceito ser contactado(a)
                 span.help.is-danger(v-if="errors.has('accepted')") Você deve aceitar para que entremos em contato.
             div(netlify-recaptcha)
             .field.is-grouped.is-grouped-right
@@ -171,9 +147,44 @@ body {
   align-self: center;
 }
 
-.pretty {
-  min-width: 100%;
-  white-space: wrap;
+.l-checkbox {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  input[type="checkbox"] {
+    display: none;
+    &:checked + i.l-success {
+      color: white;
+      background-color: #5cb85c;
+      border-color: #5cb85c;
+    }
+
+    &:checked + i.l-warning {
+      color: white;
+      background-color: #f1ab41;
+      border-color: #f1ab41;
+    }
+  }
+
+  i {
+    content: "";
+    display: block;
+    min-width: calc(1em + 2px);
+    height: calc(1em + 2px);
+    padding: 2px;
+    margin-right: 0.5em;
+    border: 1px solid #dbdbdb;
+    font-size: 1em;
+    color: transparent;
+    position: relative;
+    &:before {
+      position: absolute;
+      top: calc(50% - 0.5em);
+      left: calc(50% - 0.5em);
+    }
+    transition: all ease-in-out 0.1s;
+  }
 }
 </style>
 
@@ -205,55 +216,66 @@ export default {
   methods: {
     validateBeforeSubmit() {
       this.loading = true
-      this.$validator.validateAll().then(result => {
-        if (result && this.form.courses.length > 0) {
-          const encode = data => {
-            return Object.keys(data)
-              .map(
-                key =>
-                  encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
-              )
-              .join("&")
-          }
-          let body = encode({
-            "form-name": "subscription",
-            ...this.form
-          })
-          fetch("/send", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: body
-          })
-            .then(response => {
-              if (!response.ok) {
-                throw Error(response.statusText)
-              }
-              return response
-            })
-            .then(() => {
-              this.sended = true
-              this.form = {}
-              this.$validator.pause()
-              this.$nextTick(() => {
-                this.$validator.errors.clear()
-                this.$validator.fields.items.forEach(field => field.reset())
-                this.$validator.fields.items.forEach(field =>
-                  this.errors.remove(field)
+      if (this.form.courses.length === 0) {
+        this.noCourseSelected = true
+        this.loading = false
+      } else {
+        this.$validator.validateAll().then(result => {
+          if (result) {
+            const encode = data => {
+              return Object.keys(data)
+                .map(
+                  key =>
+                    encodeURIComponent(key) +
+                    "=" +
+                    encodeURIComponent(data[key])
                 )
-                this.$validator.resume()
+                .join("&")
+            }
+            let body = encode({
+              "form-name": "subscription",
+              ...this.form
+            })
+            fetch("/send", {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: body
+            })
+              .then(response => {
+                if (!response.ok) {
+                  throw Error(response.statusText)
+                }
+                return response
               })
-            })
-            .catch(() => {
-              this.error = true
-            })
-            .finally(() => {
-              this.loading = false
-            })
-        } else {
-          this.noCourseSelected = true
-          this.loading = false
-        }
-      })
+              .then(() => {
+                this.sended = true
+                this.form = {
+                  name: "",
+                  phone: "",
+                  cpf: "",
+                  email: "",
+                  courses: [],
+                  accepted: true
+                }
+                this.$validator.pause()
+                this.$nextTick(() => {
+                  this.$validator.errors.clear()
+                  this.$validator.fields.items.forEach(field => field.reset())
+                  this.$validator.fields.items.forEach(field =>
+                    this.errors.remove(field)
+                  )
+                  this.$validator.resume()
+                })
+              })
+              .catch(() => {
+                this.error = true
+              })
+              .finally(() => {
+                this.loading = false
+              })
+          }
+        })
+      }
     }
   }
 }
