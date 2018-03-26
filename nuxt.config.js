@@ -34,9 +34,8 @@ module.exports = {
   },
 
   meta: {
-    name: "Fale conosco - IDEPead",
-    description:
-      "Fale conosco a respeito de algum serviço prestado por nossos polos educaionais.",
+    name: "Inscreva-se - FACON",
+    description: "Inscreva-se nos cursos disponíveis na FACON agora mesmo!",
     lang: "pt-br",
     ogHost: "https://facon.idepead.com.br/",
     ogUrl: "https://facon.idepead.com.br/",
