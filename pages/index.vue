@@ -56,7 +56,7 @@ section.hero.is-facon.is-bold.is-fullheight
                 span.help.is-danger(v-if="errors.has('email')") Informe seu e-mail.
             .field
               .label Qual curso você tem interesse?
-              article.notification.is-warning(v-if="noCourseSelected")
+              article.notification.is-warning(v-if="noCourseSelected && this.form.courses.length > 0")
                 .media
                   .media-left
                     span.icon.is-large
@@ -139,14 +139,6 @@ section.hero.is-facon.is-bold.is-fullheight
                       label(for='accepted')
                         | Aceito ser contactado(a)
                 span.help.is-danger(v-if="errors.has('accepted')") Você deve aceitar para que entremos em contato.
-            //- .field
-            //-   .control
-            //-     .pretty.p-default.p-fill.p-icon
-            //-       input#accepted(checked, type='checkbox', value="accepted", v-model="form.accepted", v-validate="'required'")
-            //-       .state.p-success
-            //-         i.fa.fa-check.icon
-            //-         label(for='accepted')
-            //-           | Aceito ser contactado(a)
             div(netlify-recaptcha)
             .field.is-grouped.is-grouped-right
               p.control.is-expanded
