@@ -142,7 +142,7 @@ section.hero.is-facon.is-bold.is-fullheight
             div(netlify-recaptcha)
             .field.is-grouped.is-grouped-right
               p.control.is-expanded
-                a.button.is-text(href="https://github.com/derevandal/idepead-facon-website" target="_blank" style="text-decoration: none")
+                a.button.is-text(href="https://github.com/derevandal/idepead-website-facon" target="_blank" style="text-decoration: none")
                   span.icon.is-left
                     i.fa.fa-github
                   span André Van Dal
