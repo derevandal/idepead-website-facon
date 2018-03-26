@@ -1,0 +1,22 @@
+@import "../../node_modules/bulmaswatch/cosmo/variables";
+
+@import "../../node_modules/bulma/sass/utilities/initial-variables";
+@import "../../node_modules/bulma/sass/utilities/functions";
+
+$facon: #1E3378;
+$facon-invert: findColorInvert($facon);
+
+$facon-yellow: #F1AB41;
+$facon-yellow-invert: findColorInvert($facon-yellow);
+
+$pretty--color-warning: $facon-yellow;
+
+@import "../../node_modules/bulma/sass/utilities/derived-variables";
+$addColors: (
+  "facon":($facon, $facon-invert),
+  "facon-yellow": ($facon-yellow, $facon-yellow-invert)
+);
+
+$colors: map-merge($colors, $addColors);
+
+
