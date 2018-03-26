@@ -1,11 +1,9 @@
-import CpfValidate from "./rules/cpf"
-const validator = {
-  getMessage(field, args) {
-    // will be added to default English messages.
-    return "Invalid CPF"
-  },
-  validate(value, args) {
-    return CpfValidate(value)
+const dictionary = {
+  pt: {
+    messages: {
+      cpf: () => "CPF inválido",
+      required: field => `O campo ${field} é obrigatório.`
+    }
   }
 }
-export default validator
+export default dictionary
